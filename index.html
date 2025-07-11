@@ -4,10 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerador de QR Code</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
 </head>
 <body>
-    
+    <main>
+        <h1>Gerador de QR Code</h1>
+        <div class="input-btn">
+            <input type="text" id="url" placeholder="Insira uma URL">
+            <button id="generateBtn">Gerar</button>
+        </div>
+        <div class="qrcode-download">
+            <div id="qrcode" class="hidden"></div>
+            <button id="downloadBtn" class="hidden">Baixar QR Code</button>
+        </div>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
