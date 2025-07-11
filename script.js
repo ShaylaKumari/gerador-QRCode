@@ -17,6 +17,13 @@ generateBtn.addEventListener('click', () => {
         return;
     }
 
+    try {
+        new URL(text);
+    } catch (e) {
+        alert('Digite uma URL válida (ex: https://exemplo.com)');
+        return;
+    }
+
     clearQRCode(); 
 
     new QRCode(qrcodeDiv, {
